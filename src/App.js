@@ -23,7 +23,8 @@ export default function App() {
             weather: recurso.weather[0].main,
             clouds: recurso.clouds.all,
             latitud: recurso.coord.lat,
-            longitud: recurso.coord.lon
+            longitud: recurso.coord.lon,
+            country: recurso.sys.country
           };
           setCities(oldCities => [...oldCities, ciudad]);
         } else {

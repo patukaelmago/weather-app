@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-export default function Card ({min, max, name, img, onClose}) {
+export default function Card ({min, max, name, img, onClose, country}) {
     return (
       <div className="card">
         <div id="closeIcon" className="row">
@@ -10,6 +10,9 @@ export default function Card ({min, max, name, img, onClose}) {
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <div className="row ">
+            <div>
+              <h3>{country}</h3>
+            </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
               <p>Min</p>
               <p>{min}°</p>
