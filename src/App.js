@@ -6,7 +6,8 @@ import Footer from './components/Footer';
  
 export default function App() {
   const [cities, setCities] = useState([]);
-  const apiKey='4ae2636d8dfbdc3044bede63951a019b'
+ /*  const apiKey='4ae2636d8dfbdc3044bede63951a019b' */
+  const apiKey='3d9461e4fb5999c2bb9502bf22049935'
   function onSearch(ciudad) {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
       .then(r => r.json())
@@ -44,7 +45,7 @@ export default function App() {
       <div className='p-3 bg-dark'>
       <Cards cities={cities} onClose={onClose}/>
       </div>
-      <div className="">
+      <div >
       <Footer/>
       </div>
     </div>
