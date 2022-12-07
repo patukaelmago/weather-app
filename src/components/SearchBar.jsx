@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useId } from "react";
 
 export default function SearchBar({onSearch}) {
 const [city, setCity] = useState('')
+const id = useId();
 
   return (
     <div className="">
     <form onSubmit={(e) => {
       e.preventDefault();
-      onSearch(city);
+      {onSearch(city)};
       setCity("")
     }}>
-      <input
+      <input className="m-2"
+        id={id}
         type="text"
-        placeholder=" City..."
+        placeholder=" Search your City..."
         value = {city}
         onChange={ e => setCity(e.target.value)}
       />
-      <input className="text-dark mb-4 mt-2 bg-info bt" type="submit" value="Add" />
+      <input className="text-dark mb-4 mt-2 bg-info bt rounded" type="submit" value="Add" />
     </form>
     </div>
   );
