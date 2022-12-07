@@ -9,8 +9,6 @@ import env from "react-dotenv";
 export default function App() {
   const [cities, setCities] = useState([]);
   const apiKey = env.API_KEY;
-  
-  console.log("APIkEY:",env)
  /*  const apiKey='4ae2636d8dfbdc3044bede63951a019b' */
   /* const apiKey='3d9461e4fb5999c2bb9502bf22049935' */
   function onSearch(city) {
