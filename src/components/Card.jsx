@@ -13,15 +13,15 @@ export default function Card ({min, max, name, img, onClose, country}) {
             <div>
               <h3>{country}</h3>
             </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
+            <div className="col-4 col-sm-4 col-md-4 col-lg-4">
               <p>Min</p>
               <p>{min}°</p>
             </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
+            <div className="col-4 col-sm-4 col-md-4 col-lg-4">
               <p>Max</p>
               <p>{max}°</p>
             </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
+            <div className="col-4 col-sm-4 col-md-4 col-lg-4">
               <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt="iconoClima" />
             </div>
           </div>
